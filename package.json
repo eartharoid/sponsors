@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"build": "sponsorkit"
+		"build": "./build.sh"
 	},
 	"devDependencies": {
 		"sponsorkit": "^0.8.1"

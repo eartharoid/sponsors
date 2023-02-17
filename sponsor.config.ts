@@ -2,35 +2,34 @@ import { defineConfig, presets } from 'sponsorkit'
 
 export default defineConfig({
 	includePrivate: false,
-	width: 800,
-	formats: ['json', 'svg', 'png'],
+	// formats: ['json', 'svg', 'png'],
 	tiers: [
 		{
-			title: 'Past Sponsors',
+			title: '🥲 Past Sponsors',
 			monthlyDollars: -1,
 			preset: presets.xs,
 		},
 		{
-			title: 'Bronze Sponsors',
-			preset: presets.small,
+			title: '🥉 Bronze Sponsors',
+			preset: presets.small
 		},
 		{
-			title: 'Silver Sponsors',
+			title: '🥈 Silver Sponsors',
 			monthlyDollars: 3,
 			preset: presets.base
 		},
 		{
-			title: 'Gold Sponsors',
+			title: '🥇 Gold Sponsors',
 			monthlyDollars: 5,
 			preset: presets.medium,
 		},
 		{
-			title: 'Platinum Sponsors',
+			title: '🏆 Platinum Sponsors',
 			monthlyDollars: 7,
 			preset: presets.large,
 		},
 		{
-			title: 'Diamond Sponsors',
+			title: '💎 Diamond Sponsors',
 			monthlyDollars: 10,
 			preset: presets.xl,
 		},
