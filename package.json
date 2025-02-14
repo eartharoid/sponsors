@@ -1,9 +1,15 @@
 {
 	"private": true,
 	"scripts": {
-		"build": "./build.sh"
+		"build": "sponsorkit"
 	},
 	"devDependencies": {
-		"sponsorkit": "^0.8.3"
+		"sponsorkit": "^16.3.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"sharp"
+		]
 	}
 }

@@ -1,37 +1,51 @@
-import { defineConfig, presets } from 'sponsorkit'
+import {
+	defineConfig,
+	tierPresets
+} from 'sponsorkit'
 
 export default defineConfig({
 	includePrivate: false,
-	// formats: ['json', 'svg', 'png'],
 	tiers: [
 		{
-			title: '🥲 Past Sponsors',
+			title: 'Past Sponsors',
 			monthlyDollars: -1,
-			preset: presets.xs,
+			preset: tierPresets.xs,
 		},
 		{
-			title: '🥉 Bronze Sponsors',
-			preset: presets.small
+			title: 'Bronze Sponsors',
+			preset: tierPresets.medium
 		},
 		{
-			title: '🥈 Silver Sponsors',
-			monthlyDollars: 3,
-			preset: presets.base
-		},
-		{
-			title: '🥇 Gold Sponsors',
+			title: 'Silver Sponsors',
 			monthlyDollars: 5,
-			preset: presets.medium,
+			preset: tierPresets.large
 		},
 		{
-			title: '🏆 Platinum Sponsors',
-			monthlyDollars: 7,
-			preset: presets.large,
-		},
-		{
-			title: '💎 Diamond Sponsors',
+			title: 'Gold Sponsors',
 			monthlyDollars: 10,
-			preset: presets.xl,
+			preset: tierPresets.xl,
+		},
+	],
+	sponsorsAutoMerge: true,
+	renders: [
+		{
+			name: 'sponsors',
+			width: 800,
+			formats: ['json', 'png', 'svg'],
+			includePastSponsors: false,
+		},
+		{
+			name: 'sponsors-wide',
+			width: 1000,
+			formats: ['json', 'png', 'svg'],
+			includePastSponsors: true,
+		},
+		{
+			renderer: 'circles',
+			name: 'sponsors-circles',
+			width: 800,
+			formats: ['png', 'svg'],
+			includePastSponsors: true,
 		},
 	],
 })
